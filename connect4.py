@@ -302,7 +302,7 @@ def check_draw():
 def gameplay():
     make_board()
     valid_columns_maker()
-    for i in range(22):
+    while check_draw() == False:
         
         print_board(board)
         user1_play()
@@ -332,7 +332,7 @@ def gameplay():
 def computer_gameplay():
     make_board()
     valid_columns_maker()
-    for i in range(22):
+    while check_draw() == False:
         
         print_board(board)
         user1_play()
