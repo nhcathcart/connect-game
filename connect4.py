@@ -247,7 +247,7 @@ def check_player_1_win():
             if counter >= connect_to_win:
                 return True
 
-    for i in range(num_rows - 1, (num_rows-1) - 1 - (num_rows - connect_to_win)):
+    for i in range(num_rows - 1, (num_rows-1) - 1 - (num_rows - connect_to_win), -1):
         for j in range(num_cols - connect_to_win +1):
             counter = 0
             while i - counter > -1 and j + counter < num_cols and board[i - counter, j + counter] == piece1:
@@ -283,7 +283,7 @@ def check_player_2_win():
             if counter >= connect_to_win:
                 return True
 
-    for i in range(num_rows - 1, (num_rows-1) - 1 - (num_rows - connect_to_win)):
+    for i in range(num_rows - 1, (num_rows-1) - 1 - (num_rows - connect_to_win), -1):
         for j in range(num_cols - connect_to_win +1):
             counter = 0
             while i - counter > -1 and j + counter < num_cols and board[i - counter, j + counter] == piece2:
